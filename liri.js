@@ -28,19 +28,20 @@ inquirer
             name: "term"
         },
     ])
-    .then(function(answers){
-        console.log(answers);
-        switch (answers.liriCommands){
+    .then(function(answer){
+        console.log(answer);
+        switch (answer.liriCommands){
             case "Concerts-this": 
                 concertSearch(answer.term);
-                console.log("You want to go" + answer.term);
-                //run band function
+                console.log("You want to go see " + answer.term);
+                concertSearch (answer.term);
                 break;
             case "Spotify-this-song":
-                console.log("You want to hear" + answer.term);
+                console.log("You want to hear " + answer.term);
                 songSearch(answer.term);
                 break;
             case "Movie-this":
+                console.log("You want to watch " + answer.term);
                 movieSearch(answer.term);
                 break;
             case "Do-what-it-says":
@@ -50,7 +51,7 @@ inquirer
                     // });
                 break;
         }
-
+    });
 
 //functions of bot
 //band api -give artist/band name -> returns venue name, location, and dates
@@ -86,7 +87,7 @@ var songSearch=()=>{spotify
 };
 
 //movie api -give movie name -> return title, year, rating, rotten tomatoes rating, country, language, actors (defualt Mr. Nobody)
-var movieSearch = function () {
+var movieSearch = function  () {
         // findMovie takes in the name of a tv show and searches the tvmaze API
         this.findMovie = function (term) {
             var URL = "http://www.omdbapi.com/?t=" + answer.term + "&apikey=trilogy";
@@ -115,4 +116,3 @@ var movieSearch = function () {
             });
         };
     }
-});
