@@ -14,8 +14,8 @@ Problem: Builiding a terminal assistant to locate concert, song, and movie data.
  
  ##Technologies
  ~~~"axios": "^0.18.0",
- ~~~"dotenv": "^8.1.0",
- ~~~"inquirer": "^6.2.1",
- ~~~"moment": "^2.24.0",
- ~~~"node-spotify-api": "^1.1.1"
+ "dotenv": "^8.1.0",
+ "inquirer": "^6.2.1",
+ "moment": "^2.24.0",
+ "node-spotify-api": "^1.1.1"
  
